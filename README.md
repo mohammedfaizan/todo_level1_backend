@@ -1,77 +1,159 @@
-# To-Do App Backend
+To-Do App Backend
 
 This is the backend for a to-do application built with Node.js, Express, and MongoDB. It provides CRUD operations to manage tasks.
 
-## Features
+Features
 
-- Create, Read, Update, and Delete (CRUD) tasks
-- RESTful API with Express.js
-- MongoDB as the database
-- Uses Mongoose for data modeling
+Create, Read, Update, and Delete (CRUD) tasks
 
-## Installation
+RESTful API with Express.js
 
-1. Clone this repository:
+MongoDB as the database
 
-   ```sh
-   git clone 
-   cd todo-app-backend
-   Install dependencies:
-   ```
+Uses Mongoose for data modeling
 
+Deployment
+
+The backend is deployed and accessible at:
+
+https://todo-level1-backend.onrender.com
+
+Running Locally
+
+Prerequisites
+
+Node.js installed
+
+MongoDB instance (local or cloud-based, e.g., MongoDB Atlas)
+
+Installation Steps
+
+Clone this repository:
+
+git clone <repository_url>
+cd todo-app-backend
+
+Install dependencies:
 
 npm install
-Create a .env file and configure your MongoDB connection:
 
+Create a .env file in the root directory and configure your MongoDB connection:
 
 MONGO_URI=your_mongodb_connection_string
 PORT=5000
+
 Start the server:
 
-
 npm start
+
 Or for development mode with auto-reload:
 
-
 npm run dev
-API Endpoints
-Create a Task
-POST /api/tasks
-Body (JSON):
 
+API Endpoints
+
+Create a Task
+
+Endpoint: POST /api/tasks
+
+Body (JSON):
 
 {
 "title": "Buy groceries",
 "description": "Get milk, eggs, and bread"
 }
+
 Get All Tasks
-GET /api/tasks
+
+Endpoint: GET /api/tasks
 
 Get a Single Task
-GET /api/tasks/:id
+
+Endpoint: GET /api/tasks/:id
 
 Update a Task
-PUT /api/tasks/:id
-Body (JSON):
 
+Endpoint: PUT /api/tasks/:id
+
+Body (JSON):
 
 {
 "title": "Buy groceries",
 "description": "Get milk, eggs, bread, and butter"
 }
+
 Delete a Task
-DELETE /api/tasks/:id
+
+Endpoint: DELETE /api/tasks/:id
+
+Using the Deployed Version (Postman Guide)
+
+Open Postman.
+
+Set the Base URL to:
+
+https://todo-level1-backend.onrender.com
+
+Use the following endpoints to interact with the API:
+
+Create a Task:
+
+Method: POST
+
+URL: https://todo-level1-backend.onrender.com/api/tasks
+
+Body (JSON):
+
+{
+"title": "Buy groceries",
+"description": "Get milk, eggs, and bread"
+}
+
+Get All Tasks:
+
+Method: GET
+
+URL: https://todo-level1-backend.onrender.com/api/tasks
+
+Get a Single Task:
+
+Method: GET
+
+URL: https://todo-level1-backend.onrender.com/api/tasks/{task_id}
+
+Update a Task:
+
+Method: PUT
+
+URL: https://todo-level1-backend.onrender.com/api/tasks/{task_id}
+
+Body (JSON):
+
+{
+"title": "Buy groceries",
+"description": "Get milk, eggs, bread, and butter"
+}
+
+Delete a Task:
+
+Method: DELETE
+
+URL: https://todo-level1-backend.onrender.com/api/tasks/{task_id}
 
 Technologies Used
+
 Node.js
+
 Express.js
+
 MongoDB
+
 Mongoose
+
 dotenv (for environment variables)
+
 nodemon (for development)
+
 License
+
 This project is licensed under the MIT License.
-
-
-
-Let me know if you need any modifications! 🚀
