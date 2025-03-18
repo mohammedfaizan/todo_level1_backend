@@ -11,7 +11,7 @@ const newTask = async (req, res) => {
         .json({ message: "Title and description not found" });
     }
 
-    await Task.create({ title, description, due_date });
+    const newTask = await Task.create({ title, description, due_date });
 
     res.status(200).json({
       message: "created a task",
