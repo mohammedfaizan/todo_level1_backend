@@ -14,7 +14,9 @@ const newTask = async (req, res) => {
     const newTask = await Task.create({ title, description, due_date });
 
     res.status(200).json({
+      success: true,
       message: "created a task",
+      tasks: newTask,
     });
   } catch (error) {
     res.status(400).json({
